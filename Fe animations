@@ -23,7 +23,7 @@ local colors = {
 }
  
  
-_G.Key = "BH-nxiJis02mz"
+_G.Key = "Zintux"
 _G.KeyInput = "string"
  
  
@@ -64,5 +64,5 @@ Section2:NewButton(game:GetService("MarketplaceService"):GetProductInfo(game.Pla
 end)
  
 Section2:NewButton("Copy Discord Tag","Copies My Discord Tag", function()
-    setclipboard("!  >Dialz.#4528")
+    setclipboard("!  >if0undy0u#0000")
 end)
