@@ -1,190 +1,984 @@
-local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
-local X = Material.Load({
-Title = "Soul Eater",
-Style = 3,
-SizeX = 500,
-SizeY = 350,
-ColorOverrides = {
-MainFrame = Color3.fromRGB(20,20,20),
-Minimise = Color3.fromRGB(20, 20, 20),
-MinimiseAccent = Color3.fromRGB(219, 210, 202),
-Maximise = Color3.fromRGB(189, 183, 177),
-MaximiseAccent = Color3.fromRGB(189, 183, 177),
-NavBar = Color3.fromRGB(166, 255, 0),
-NavBarAccent = Color3.fromRGB(20,20,20),
-NavBarInvert = Color3.fromRGB(30,30,30),
-TitleBar = Color3.fromRGB(166, 255, 0),
-TitleBarAccent = Color3.fromRGB(20,20,20),
-Overlay = Color3.fromRGB(166, 255, 0),
-Banner = Color3.fromRGB(20,20,20),
-BannerAccent = Color3.fromRGB(166, 255, 0),
-Content = Color3.fromRGB(166, 255, 0),
-Button = Color3.fromRGB(166, 255, 0),
-ButtonAccent = Color3.fromRGB(20,20,20),
-ChipSet = Color3.fromRGB(166, 255, 0),
-ChipSetAccent = Color3.fromRGB(20,20,20),
-DataTable = Color3.fromRGB(166, 255, 0),
-DataTableAccent = Color3.fromRGB(20,20,20),
-Slider = Color3.fromRGB(20,20,20),
-SliderAccent = Color3.fromRGB(166, 255, 0),
-Toggle = Color3.fromRGB(166, 255, 0),
-ToggleAccent = Color3.fromRGB(20,20,20),
-Dropdown = Color3.fromRGB(20,20,20),
-DropdownAccent = Color3.fromRGB(166, 255, 0),
-ColorPicker = Color3.fromRGB(20,20,20),
-ColorPickerAccent = Color3.fromRGB(166, 255, 0),
-TextField = Color3.fromRGB(166, 255, 0),
-TextFieldAccent = Color3.fromRGB(20,20,20),
-}
-})
-
-
--- functions --
-local tp = false
-local Plr = game:GetService("Players").LocalPlayer
-local Mouse = Plr:GetMouse()
-Mouse.Button1Down:connect(function()
-    if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftControl) and Mouse.Target and tp then
-        Plr.Character:MoveTo(Mouse.Hit.p)
-    end
-end)
-local function pressKey(key)
-    game:GetService('VirtualInputManager'):SendKeyEvent(true, key, false, game)
+local ProtoSmasher = Instance.new("ScreenGui")
+local Whitelist = Instance.new("Frame")
+local TItle1 = Instance.new("TextLabel")
+local Title2 = Instance.new("TextLabel")
+local TopBar = Instance.new("TextLabel")
+local Exit = Instance.new("TextButton")
+local ProtosmasherTitle = Instance.new("TextLabel")
+local ProtosmasherLogo = Instance.new("ImageLabel")
+local WhitelistChanger = Instance.new("TextButton")
+local Updater = Instance.new("TextButton")
+local TemporaryKey = Instance.new("TextLabel")
+local TemporaryKeyBox = Instance.new("TextBox")
+local SubmitButton = Instance.new("TextButton")
+local Notice = Instance.new("TextLabel")
+local LatestVersion = Instance.new("TextLabel")
+local DownloadUpdate = Instance.new("TextButton")
+local Protosmasher = Instance.new("Frame")
+local TopBar_2 = Instance.new("TextLabel")
+local ProtosmasherBackground = Instance.new("ImageLabel")
+local ProtosmasherTitle_2 = Instance.new("TextLabel")
+local ProtosmasherLogo_2 = Instance.new("ImageLabel")
+local Exit_2 = Instance.new("TextButton")
+local Close = Instance.new("TextButton")
+local Tab = Instance.new("TextLabel")
+local EditorFrame = Instance.new("ScrollingFrame")
+local Source = Instance.new("TextBox")
+local Comments_ = Instance.new("TextLabel")
+local Globals_ = Instance.new("TextLabel")
+local Keywords_ = Instance.new("TextLabel")
+local RemoteHighlight_ = Instance.new("TextLabel")
+local Strings_ = Instance.new("TextLabel")
+local Tokens_ = Instance.new("TextLabel")
+local Numbers_ = Instance.new("TextLabel")
+local Lines = Instance.new("TextLabel")
+local Execute = Instance.new("TextButton")
+local OpenFile = Instance.new("TextButton")
+local CLEAR = Instance.new("TextButton")
+local Inject = Instance.new("TextButton")
+local Output = Instance.new("TextLabel")
+local Settings = Instance.new("TextButton")
+local NewTab = Instance.new("TextButton")
+local Theme = Instance.new("TextLabel")
+local OpenFrame = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+--Properties:
+ProtoSmasher.Name = "ProtoSmasher"
+ProtoSmasher.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ProtoSmasher.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ 
+Whitelist.Name = "Whitelist"
+Whitelist.Parent = ProtoSmasher
+Whitelist.BackgroundColor3 = Color3.new(0.188235, 0.188235, 0.188235)
+Whitelist.BorderColor3 = Color3.new(1, 1, 1)
+Whitelist.BorderSizePixel = 3
+Whitelist.Position = UDim2.new(0.152335808, 0, 0.289205939, 0)
+Whitelist.Size = UDim2.new(0, 629, 0, 338)
+ 
+TItle1.Name = "TItle1"
+TItle1.Parent = Whitelist
+TItle1.BackgroundColor3 = Color3.new(1, 1, 1)
+TItle1.BackgroundTransparency = 1
+TItle1.Position = UDim2.new(0.0573339872, 0, 0.041420117, 0)
+TItle1.Size = UDim2.new(0, 351, 0, 50)
+TItle1.Font = Enum.Font.GothamBold
+TItle1.Text = "PROTO"
+TItle1.TextColor3 = Color3.new(0, 0, 0)
+TItle1.TextScaled = true
+TItle1.TextSize = 14
+TItle1.TextWrapped = true
+ 
+Title2.Name = "Title2"
+Title2.Parent = Whitelist
+Title2.BackgroundColor3 = Color3.new(1, 1, 1)
+Title2.BackgroundTransparency = 1
+Title2.Position = UDim2.new(0.371221036, 0, 0.041420117, 0)
+Title2.Size = UDim2.new(0, 351, 0, 50)
+Title2.Font = Enum.Font.GothamBold
+Title2.Text = "SMASHER"
+Title2.TextColor3 = Color3.new(1, 1, 1)
+Title2.TextScaled = true
+Title2.TextSize = 14
+Title2.TextWrapped = true
+ 
+TopBar.Name = "TopBar"
+TopBar.Parent = Whitelist
+TopBar.BackgroundColor3 = Color3.new(1, 1, 1)
+TopBar.Position = UDim2.new(-0.0047694752, 0, -0.109467454, 0)
+TopBar.Size = UDim2.new(0, 635, 0, 37)
+TopBar.Font = Enum.Font.SourceSans
+TopBar.Text = ""
+TopBar.TextColor3 = Color3.new(0, 0, 0)
+TopBar.TextSize = 14
+ 
+Exit.Name = "Exit"
+Exit.Parent = Whitelist
+Exit.BackgroundColor3 = Color3.new(1, 1, 1)
+Exit.BackgroundTransparency = 1
+Exit.Position = UDim2.new(0.928457916, 0, -0.112426043, 0)
+Exit.Size = UDim2.new(0, 26, 0, 38)
+Exit.Font = Enum.Font.SourceSans
+Exit.Text = "X"
+Exit.TextColor3 = Color3.new(0, 0, 0)
+Exit.TextScaled = true
+Exit.TextSize = 14
+Exit.TextWrapped = true
+ 
+ProtosmasherTitle.Name = "ProtosmasherTitle"
+ProtosmasherTitle.Parent = Whitelist
+ProtosmasherTitle.BackgroundColor3 = Color3.new(1, 1, 1)
+ProtosmasherTitle.BackgroundTransparency = 1
+ProtosmasherTitle.Position = UDim2.new(0.0985691622, 0, -0.112426035, 0)
+ProtosmasherTitle.Size = UDim2.new(0, 85, 0, 38)
+ProtosmasherTitle.Font = Enum.Font.ArialBold
+ProtosmasherTitle.Text = "ProtoSmasher"
+ProtosmasherTitle.TextColor3 = Color3.new(0, 0, 0)
+ProtosmasherTitle.TextSize = 14
+ 
+ProtosmasherLogo.Name = "ProtosmasherLogo"
+ProtosmasherLogo.Parent = Whitelist
+ProtosmasherLogo.BackgroundColor3 = Color3.new(1, 1, 1)
+ProtosmasherLogo.BorderSizePixel = 0
+ProtosmasherLogo.Position = UDim2.new(0.0143084265, 0, -0.0917159766, 0)
+ProtosmasherLogo.Size = UDim2.new(0, 36, 0, 31)
+ProtosmasherLogo.Image = "http://www.roblox.com/asset/?id=1145377988"
+ 
+WhitelistChanger.Name = "WhitelistChanger"
+WhitelistChanger.Parent = Whitelist
+WhitelistChanger.BackgroundColor3 = Color3.new(0.231373, 0.231373, 0.231373)
+WhitelistChanger.Position = UDim2.new(0, 0, 0.210059166, 0)
+WhitelistChanger.Size = UDim2.new(0, 312, 0, 32)
+WhitelistChanger.Font = Enum.Font.SourceSans
+WhitelistChanger.Text = "Whitelist Changer"
+WhitelistChanger.TextColor3 = Color3.new(0.396078, 0.352941, 1)
+WhitelistChanger.TextSize = 14
+ 
+Updater.Name = "Updater"
+Updater.Parent = Whitelist
+Updater.BackgroundColor3 = Color3.new(0.223529, 0.223529, 0.223529)
+Updater.Position = UDim2.new(0.496025443, 0, 0.210059166, 0)
+Updater.Size = UDim2.new(0, 317, 0, 32)
+Updater.Font = Enum.Font.SourceSans
+Updater.Text = "Updater"
+Updater.TextColor3 = Color3.new(0.435294, 0.435294, 1)
+Updater.TextSize = 14
+ 
+TemporaryKey.Name = "TemporaryKey"
+TemporaryKey.Parent = Whitelist
+TemporaryKey.BackgroundColor3 = Color3.new(1, 1, 1)
+TemporaryKey.BackgroundTransparency = 1
+TemporaryKey.Position = UDim2.new(0.0333863311, 0, 0.337278098, 0)
+TemporaryKey.Size = UDim2.new(0, 200, 0, 39)
+TemporaryKey.Font = Enum.Font.SourceSansLight
+TemporaryKey.Text = "Temporary Key"
+TemporaryKey.TextColor3 = Color3.new(1, 1, 1)
+TemporaryKey.TextScaled = true
+TemporaryKey.TextSize = 14
+TemporaryKey.TextWrapped = true
+ 
+TemporaryKeyBox.Name = "TemporaryKeyBox"
+TemporaryKeyBox.Parent = Whitelist
+TemporaryKeyBox.BackgroundColor3 = Color3.new(1, 1, 1)
+TemporaryKeyBox.Position = UDim2.new(0.0476947539, 0, 0.479289919, 0)
+TemporaryKeyBox.Size = UDim2.new(0, 404, 0, 36)
+TemporaryKeyBox.Font = Enum.Font.SourceSansLight
+TemporaryKeyBox.Text = ""
+TemporaryKeyBox.TextColor3 = Color3.new(0, 0, 0)
+TemporaryKeyBox.TextScaled = true
+TemporaryKeyBox.TextSize = 14
+TemporaryKeyBox.TextWrapped = true
+TemporaryKeyBox.TextXAlignment = Enum.TextXAlignment.Left
+ 
+SubmitButton.Name = "SubmitButton"
+SubmitButton.Parent = Whitelist
+SubmitButton.BackgroundColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+SubmitButton.Position = UDim2.new(0.0476947576, 0, 0.633136094, 0)
+SubmitButton.Size = UDim2.new(0, 126, 0, 29)
+SubmitButton.Font = Enum.Font.SourceSansLight
+SubmitButton.Text = "Submit"
+SubmitButton.TextColor3 = Color3.new(1, 1, 1)
+SubmitButton.TextScaled = true
+SubmitButton.TextSize = 14
+SubmitButton.TextWrapped = true
+ 
+Notice.Name = "Notice"
+Notice.Parent = Whitelist
+Notice.BackgroundColor3 = Color3.new(1, 1, 1)
+Notice.BackgroundTransparency = 1
+Notice.Position = UDim2.new(0.0476947539, 0, 0.772189379, 0)
+Notice.Size = UDim2.new(0, 520, 0, 32)
+Notice.Font = Enum.Font.SourceSansLight
+Notice.Text = "Note: Please do not spam click the button as cloudflare might ip-ban you."
+Notice.TextColor3 = Color3.new(1, 1, 1)
+Notice.TextScaled = true
+Notice.TextSize = 14
+Notice.TextWrapped = true
+Notice.TextXAlignment = Enum.TextXAlignment.Left
+ 
+LatestVersion.Name = "LatestVersion"
+LatestVersion.Parent = Whitelist
+LatestVersion.BackgroundColor3 = Color3.new(1, 1, 1)
+LatestVersion.BackgroundTransparency = 1
+LatestVersion.Position = UDim2.new(0.187599361, 0, 0.369822472, 0)
+LatestVersion.Size = UDim2.new(0, 392, 0, 50)
+LatestVersion.Visible = false
+LatestVersion.Font = Enum.Font.SourceSansLight
+LatestVersion.Text = "You are on the latest version of Protosmasher."
+LatestVersion.TextColor3 = Color3.new(1, 1, 1)
+LatestVersion.TextScaled = true
+LatestVersion.TextSize = 14
+LatestVersion.TextWrapped = true
+ 
+DownloadUpdate.Name = "DownloadUpdate"
+DownloadUpdate.Parent = Whitelist
+DownloadUpdate.BackgroundColor3 = Color3.new(0.227451, 0.227451, 0.227451)
+DownloadUpdate.Position = UDim2.new(0.325914145, 0, 0.53550297, 0)
+DownloadUpdate.Size = UDim2.new(0, 217, 0, 43)
+DownloadUpdate.Visible = false
+DownloadUpdate.Font = Enum.Font.SourceSansLight
+DownloadUpdate.Text = "Download Latest Update"
+DownloadUpdate.TextColor3 = Color3.new(1, 1, 1)
+DownloadUpdate.TextScaled = true
+DownloadUpdate.TextSize = 14
+DownloadUpdate.TextWrapped = true
+ 
+Protosmasher.Name = "Protosmasher"
+Protosmasher.Parent = ProtoSmasher
+Protosmasher.BackgroundColor3 = Color3.new(1, 1, 1)
+Protosmasher.Position = UDim2.new(0.169790521, 0, 0.120496891, 0)
+Protosmasher.Size = UDim2.new(0, 552, 0, 553)
+Protosmasher.Visible = false
+ 
+TopBar_2.Name = "TopBar"
+TopBar_2.Parent = Protosmasher
+TopBar_2.BackgroundColor3 = Color3.new(1, 1, 1)
+TopBar_2.Position = UDim2.new(-0.0104152849, 0, -0.0725670755, 0)
+TopBar_2.Size = UDim2.new(0, 582, 0, 37)
+TopBar_2.Font = Enum.Font.SourceSans
+TopBar_2.Text = ""
+TopBar_2.TextColor3 = Color3.new(0, 0, 0)
+TopBar_2.TextSize = 14
+ 
+ProtosmasherBackground.Name = "Protosmasher Background"
+ProtosmasherBackground.Parent = Protosmasher
+ProtosmasherBackground.BackgroundColor3 = Color3.new(1, 1, 1)
+ProtosmasherBackground.BorderColor3 = Color3.new(1, 1, 1)
+ProtosmasherBackground.BorderSizePixel = 3
+ProtosmasherBackground.Position = UDim2.new(-0.0104152849, 0, -0.00369003322, 0)
+ProtosmasherBackground.Size = UDim2.new(0, 582, 0, 555)
+ProtosmasherBackground.Image = "http://www.roblox.com/asset/?id=733310987"
+ 
+ProtosmasherTitle_2.Name = "ProtosmasherTitle"
+ProtosmasherTitle_2.Parent = Protosmasher
+ProtosmasherTitle_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ProtosmasherTitle_2.BackgroundTransparency = 1
+ProtosmasherTitle_2.Position = UDim2.new(0.0822648332, 0, -0.0755256563, 0)
+ProtosmasherTitle_2.Size = UDim2.new(0, 155, 0, 38)
+ProtosmasherTitle_2.Font = Enum.Font.ArialBold
+ProtosmasherTitle_2.Text = "ProtoSmasher Rewrite"
+ProtosmasherTitle_2.TextColor3 = Color3.new(0, 0, 0)
+ProtosmasherTitle_2.TextSize = 14
+ 
+ProtosmasherLogo_2.Name = "ProtosmasherLogo"
+ProtosmasherLogo_2.Parent = Protosmasher
+ProtosmasherLogo_2.BackgroundColor3 = Color3.new(1, 1, 1)
+ProtosmasherLogo_2.BorderSizePixel = 0
+ProtosmasherLogo_2.Position = UDim2.new(0.0179316197, 0, -0.0529705919, 0)
+ProtosmasherLogo_2.Size = UDim2.new(0, 36, 0, 25)
+ProtosmasherLogo_2.Image = "http://www.roblox.com/asset/?id=1145377988"
+ 
+Exit_2.Name = "Exit"
+Exit_2.Parent = Protosmasher
+Exit_2.BackgroundColor3 = Color3.new(1, 1, 1)
+Exit_2.BackgroundTransparency = 1
+Exit_2.Position = UDim2.new(0.950197041, 0, -0.0773706883, 0)
+Exit_2.Size = UDim2.new(0, 26, 0, 38)
+Exit_2.Font = Enum.Font.SourceSans
+Exit_2.Text = "X"
+Exit_2.TextColor3 = Color3.new(0, 0, 0)
+Exit_2.TextScaled = true
+Exit_2.TextSize = 14
+Exit_2.TextWrapped = true
+ 
+Close.Name = "Close"
+Close.Parent = Protosmasher
+Close.BackgroundColor3 = Color3.new(1, 1, 1)
+Close.BackgroundTransparency = 1
+Close.Position = UDim2.new(0.825341046, 0, -0.100689977, 0)
+Close.Size = UDim2.new(0, 26, 0, 38)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "_"
+Close.TextColor3 = Color3.new(0, 0, 0)
+Close.TextScaled = true
+Close.TextSize = 14
+Close.TextWrapped = true
+ 
+Tab.Name = "Tab"
+Tab.Parent = Protosmasher
+Tab.BackgroundColor3 = Color3.new(1, 1, 1)
+Tab.Position = UDim2.new(0.0344202891, 0, 0.0276752766, 0)
+Tab.Size = UDim2.new(0, 103, 0, 23)
+Tab.Font = Enum.Font.SourceSans
+Tab.Text = "Untitled"
+Tab.TextColor3 = Color3.new(0, 0, 0)
+Tab.TextSize = 14
+ 
+EditorFrame.Name = "EditorFrame"
+EditorFrame.Parent = Protosmasher
+EditorFrame.BackgroundColor3 = Color3.new(0.145098, 0.145098, 0.145098)
+EditorFrame.BorderColor3 = Color3.new(1, 1, 1)
+EditorFrame.BorderSizePixel = 3
+EditorFrame.Position = UDim2.new(0, 23, 0, 38)
+EditorFrame.Size = UDim2.new(0, 530, 0, 259)
+EditorFrame.ZIndex = 3
+EditorFrame.BottomImage = "rbxassetid://148970562"
+EditorFrame.CanvasSize = UDim2.new(0, 0, 0, 0)
+EditorFrame.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+EditorFrame.MidImage = "rbxassetid://148970562"
+EditorFrame.ScrollBarThickness = 5
+EditorFrame.TopImage = "rbxassetid://148970562"
+ 
+Source.Name = "Source"
+Source.Parent = EditorFrame
+Source.BackgroundColor3 = Color3.new(1, 1, 1)
+Source.BackgroundTransparency = 1
+Source.Position = UDim2.new(0, 30, 0, 0)
+Source.Size = UDim2.new(1, 0, 1, 0)
+Source.ZIndex = 3
+Source.ClearTextOnFocus = false
+Source.Font = Enum.Font.Code
+Source.MultiLine = true
+Source.PlaceholderColor3 = Color3.new(0.8, 0.8, 0.8)
+Source.Text = "local Protosmasher = \"Protosmasher\"\nif Protosmasher = \"Protosmasher\" then\nprint(\"Protosmasher\")\nwarn(\"Protosmasher\")\n----------------------------------------\nwhile wait() do\nwarn(\"Protosmasher\")\nwarn(\"Protosmasher\")\nwarn(\"Protosmasher\")\nwarn(\"Protosmasher\")\nbreak\nend"
+Source.TextColor3 = Color3.new(0.8, 0.8, 0.8)
+Source.TextSize = 15
+Source.TextXAlignment = Enum.TextXAlignment.Left
+Source.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Comments_.Name = "Comments_"
+Comments_.Parent = Source
+Comments_.BackgroundColor3 = Color3.new(1, 1, 1)
+Comments_.BackgroundTransparency = 1
+Comments_.Size = UDim2.new(1, 0, 1, 0)
+Comments_.ZIndex = 5
+Comments_.Font = Enum.Font.Code
+Comments_.Text = ""
+Comments_.TextColor3 = Color3.new(0.231373, 0.784314, 0.231373)
+Comments_.TextSize = 15
+Comments_.TextXAlignment = Enum.TextXAlignment.Left
+Comments_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Globals_.Name = "Globals_"
+Globals_.Parent = Source
+Globals_.BackgroundColor3 = Color3.new(1, 1, 1)
+Globals_.BackgroundTransparency = 1
+Globals_.Size = UDim2.new(1, 0, 1, 0)
+Globals_.ZIndex = 5
+Globals_.Font = Enum.Font.Code
+Globals_.Text = ""
+Globals_.TextColor3 = Color3.new(0.517647, 0.839216, 0.968628)
+Globals_.TextSize = 15
+Globals_.TextXAlignment = Enum.TextXAlignment.Left
+Globals_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Keywords_.Name = "Keywords_"
+Keywords_.Parent = Source
+Keywords_.BackgroundColor3 = Color3.new(1, 1, 1)
+Keywords_.BackgroundTransparency = 1
+Keywords_.Size = UDim2.new(1, 0, 1, 0)
+Keywords_.ZIndex = 5
+Keywords_.Font = Enum.Font.Code
+Keywords_.Text = ""
+Keywords_.TextColor3 = Color3.new(0.972549, 0.427451, 0.486275)
+Keywords_.TextSize = 15
+Keywords_.TextXAlignment = Enum.TextXAlignment.Left
+Keywords_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+RemoteHighlight_.Name = "RemoteHighlight_"
+RemoteHighlight_.Parent = Source
+RemoteHighlight_.BackgroundColor3 = Color3.new(1, 1, 1)
+RemoteHighlight_.BackgroundTransparency = 1
+RemoteHighlight_.Size = UDim2.new(1, 0, 1, 0)
+RemoteHighlight_.ZIndex = 5
+RemoteHighlight_.Font = Enum.Font.Code
+RemoteHighlight_.Text = ""
+RemoteHighlight_.TextColor3 = Color3.new(0, 0.568627, 1)
+RemoteHighlight_.TextSize = 15
+RemoteHighlight_.TextXAlignment = Enum.TextXAlignment.Left
+RemoteHighlight_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Strings_.Name = "Strings_"
+Strings_.Parent = Source
+Strings_.BackgroundColor3 = Color3.new(1, 1, 1)
+Strings_.BackgroundTransparency = 1
+Strings_.Size = UDim2.new(1, 0, 1, 0)
+Strings_.ZIndex = 5
+Strings_.Font = Enum.Font.Code
+Strings_.Text = ""
+Strings_.TextColor3 = Color3.new(0.678431, 0.945098, 0.584314)
+Strings_.TextSize = 15
+Strings_.TextXAlignment = Enum.TextXAlignment.Left
+Strings_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Tokens_.Name = "Tokens_"
+Tokens_.Parent = Source
+Tokens_.BackgroundColor3 = Color3.new(1, 1, 1)
+Tokens_.BackgroundTransparency = 1
+Tokens_.Size = UDim2.new(1, 0, 1, 0)
+Tokens_.ZIndex = 5
+Tokens_.Font = Enum.Font.Code
+Tokens_.Text = ""
+Tokens_.TextColor3 = Color3.new(1, 1, 1)
+Tokens_.TextSize = 15
+Tokens_.TextXAlignment = Enum.TextXAlignment.Left
+Tokens_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Numbers_.Name = "Numbers_"
+Numbers_.Parent = Source
+Numbers_.BackgroundColor3 = Color3.new(1, 1, 1)
+Numbers_.BackgroundTransparency = 1
+Numbers_.Size = UDim2.new(1, 0, 1, 0)
+Numbers_.ZIndex = 4
+Numbers_.Font = Enum.Font.Code
+Numbers_.Text = ""
+Numbers_.TextColor3 = Color3.new(1, 0.776471, 0)
+Numbers_.TextSize = 15
+Numbers_.TextXAlignment = Enum.TextXAlignment.Left
+Numbers_.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Lines.Name = "Lines"
+Lines.Parent = EditorFrame
+Lines.BackgroundColor3 = Color3.new(1, 1, 1)
+Lines.BackgroundTransparency = 1
+Lines.Size = UDim2.new(0, 30, 1, 0)
+Lines.ZIndex = 4
+Lines.Font = Enum.Font.Code
+Lines.Text = "1"
+Lines.TextColor3 = Color3.new(1, 1, 1)
+Lines.TextSize = 15
+Lines.TextYAlignment = Enum.TextYAlignment.Top
+ 
+Execute.Name = "Execute"
+Execute.Parent = Protosmasher
+Execute.BackgroundColor3 = Color3.new(0, 0, 0)
+Execute.BorderColor3 = Color3.new(1, 1, 1)
+Execute.BorderSizePixel = 3
+Execute.Position = UDim2.new(0.0416666679, 0, 0.558770359, 0)
+Execute.Size = UDim2.new(0, 118, 0, 50)
+Execute.Font = Enum.Font.GothamBold
+Execute.Text = "EXECUTE"
+Execute.TextColor3 = Color3.new(1, 1, 1)
+Execute.TextScaled = true
+Execute.TextSize = 14
+Execute.TextWrapped = true
+ 
+OpenFile.Name = "OpenFile"
+OpenFile.Parent = Protosmasher
+OpenFile.BackgroundColor3 = Color3.new(0, 0, 0)
+OpenFile.BorderColor3 = Color3.new(1, 1, 1)
+OpenFile.BorderSizePixel = 3
+OpenFile.Position = UDim2.new(0.282608688, 0, 0.558770359, 0)
+OpenFile.Size = UDim2.new(0, 120, 0, 50)
+OpenFile.Font = Enum.Font.GothamBold
+OpenFile.Text = "OPEN FILE"
+OpenFile.TextColor3 = Color3.new(1, 1, 1)
+OpenFile.TextSize = 23
+OpenFile.TextWrapped = true
+ 
+CLEAR.Name = "CLEAR"
+CLEAR.Parent = Protosmasher
+CLEAR.BackgroundColor3 = Color3.new(0, 0, 0)
+CLEAR.BorderColor3 = Color3.new(1, 1, 1)
+CLEAR.BorderSizePixel = 3
+CLEAR.Position = UDim2.new(0.525362313, 0, 0.558770359, 0)
+CLEAR.Size = UDim2.new(0, 123, 0, 50)
+CLEAR.Font = Enum.Font.GothamBold
+CLEAR.Text = "CLEAR"
+CLEAR.TextColor3 = Color3.new(1, 1, 1)
+CLEAR.TextScaled = true
+CLEAR.TextSize = 14
+CLEAR.TextWrapped = true
+ 
+Inject.Name = "Inject"
+Inject.Parent = Protosmasher
+Inject.BackgroundColor3 = Color3.new(0, 0, 0)
+Inject.BorderColor3 = Color3.new(1, 1, 1)
+Inject.BorderSizePixel = 3
+Inject.Position = UDim2.new(0.773550808, 0, 0.558770359, 0)
+Inject.Size = UDim2.new(0, 123, 0, 50)
+Inject.Font = Enum.Font.GothamBold
+Inject.Text = "INJECT"
+Inject.TextColor3 = Color3.new(1, 1, 1)
+Inject.TextScaled = true
+Inject.TextSize = 14
+Inject.TextWrapped = true
+ 
+Output.Name = "Output"
+Output.Parent = Protosmasher
+Output.BackgroundColor3 = Color3.new(0.392157, 0.392157, 0.392157)
+Output.Position = UDim2.new(0.0380434766, 0, 0.672694385, 0)
+Output.Size = UDim2.new(0, 532, 0, 130)
+Output.Font = Enum.Font.SourceSans
+Output.Text = ""
+Output.TextColor3 = Color3.new(0, 0, 0)
+Output.TextSize = 14
+ 
+Settings.Name = "Settings"
+Settings.Parent = Protosmasher
+Settings.BackgroundColor3 = Color3.new(0, 0, 0)
+Settings.BorderColor3 = Color3.new(1, 1, 1)
+Settings.BorderSizePixel = 3
+Settings.Position = UDim2.new(0.0416666679, 0, 0.92766726, 0)
+Settings.Size = UDim2.new(0, 109, 0, 33)
+Settings.Font = Enum.Font.GothamBold
+Settings.Text = "SETTINGS"
+Settings.TextColor3 = Color3.new(1, 1, 1)
+Settings.TextScaled = true
+Settings.TextSize = 14
+Settings.TextWrapped = true
+ 
+NewTab.Name = "NewTab"
+NewTab.Parent = Protosmasher
+NewTab.BackgroundColor3 = Color3.new(0, 0, 0)
+NewTab.BorderColor3 = Color3.new(1, 1, 1)
+NewTab.BorderSizePixel = 3
+NewTab.Position = UDim2.new(0.269927531, 0, 0.92766726, 0)
+NewTab.Size = UDim2.new(0, 112, 0, 33)
+NewTab.Font = Enum.Font.GothamBold
+NewTab.Text = "NEW TAB"
+NewTab.TextColor3 = Color3.new(1, 1, 1)
+NewTab.TextScaled = true
+NewTab.TextSize = 14
+NewTab.TextWrapped = true
+ 
+Theme.Name = "Theme"
+Theme.Parent = Protosmasher
+Theme.BackgroundColor3 = Color3.new(1, 1, 1)
+Theme.Position = UDim2.new(0.5, 0, 0.926409364, 0)
+Theme.Size = UDim2.new(0, 274, 0, 33)
+Theme.Font = Enum.Font.SourceSans
+Theme.Text = "     Main Theme (river58)"
+Theme.TextColor3 = Color3.new(0, 0, 0)
+Theme.TextSize = 14
+Theme.TextXAlignment = Enum.TextXAlignment.Left
+ 
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = ProtoSmasher
+OpenFrame.BackgroundColor3 = Color3.new(1, 1, 1)
+OpenFrame.Position = UDim2.new(0, 0, 0.408695638, 0)
+OpenFrame.Size = UDim2.new(0, 100, 0, 65)
+OpenFrame.Visible = false
+ 
+Open.Name = "Open"
+Open.Parent = OpenFrame
+Open.BackgroundColor3 = Color3.new(0.266667, 0.266667, 0.266667)
+Open.Size = UDim2.new(0, 100, 0, 65)
+Open.Font = Enum.Font.SourceSans
+Open.Text = "Open"
+Open.TextColor3 = Color3.new(1, 1, 1)
+Open.TextScaled = true
+Open.TextSize = 14
+Open.TextWrapped = true
+-- Scripts:
+function SCRIPT_UZYA70_FAKESCRIPT() -- Whitelist.Draggable 
+	local script = Instance.new('LocalScript')
+	script.Parent = Whitelist
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+ 
 end
-local farmM = false
-local monsters = {}
-local farmMonsters = function()
-    local npcs = game:GetService("Workspace").NPCS:GetChildren()
-    while farmM do
-        wait()
-        for i,v in pairs(npcs) do
-            for j,x in pairs(monsters) do
-                if string.match(v.Name, x) then
-                    while farmM do
-                        wait()
-                        Plr.Character.HumanoidRootPart.CFrame = v[x].HumanoidRootPart.CFrame + v[x].HumanoidRootPart.CFrame.LookVector * -3
-                        local args = {
-                            [1] = "Up",
-                            [2] = CFrame.new(35.08075714111328, 140.1752166748047, -382.56640625) * CFrame.Angles(2.9372031688690186, 0.6149491667747498, -3.0225722789764404),
-                            [3] = "\240\159\152\153\240\159\152\153\240\159\152\161\240\159\152\173\240\159\152\173\240\159\152\173\240\159\152\173\240\159\164\160",
-                            [4] = "Down"
-                        }
-                        game:GetService("ReplicatedStorage").Remotes.KeyEvent:FireServer(unpack(args))
-                        pressKey(Enum.KeyCode.Q)
-                        pressKey(Enum.KeyCode.E)
-                        pressKey(Enum.KeyCode.F)
-                        pressKey(Enum.KeyCode.R)
-                        if v[x].Humanoid.Health == 0 or game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-                            break
-                        end
-                    end
-                    if game.Players.LocalPlayer.Character.Humanoid.Health == 0 then
-                        wait(5)
-                        pressKey(Enum.KeyCode.L)
-                    end
-                end
-            end
-        end
-    end
+coroutine.resume(coroutine.create(SCRIPT_UZYA70_FAKESCRIPT))
+function SCRIPT_LXGI67_FAKESCRIPT() -- Exit.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Exit
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Whitelist.Visible = false
+	end)
+ 
 end
-
-local farmQ = false
-local quest = nil
-local farmQuests = function()
-    local location = nil
-    if quest == "Psychopath" then
-        location = "PoliceQuest"
-    elseif quest == "Blademaster" then
-        location = "BurnedTunafishDog"
-    elseif quest == "Meister" then
-        location = "Chrona"
-    elseif quest == "Zombie" then
-        location = "ZombieQuest"
-    end
-    while farmQ do
-        wait()
-        if game:GetService("Players").LocalPlayer.PlayerGui.Gui.Quests.Visible == false then
-            Plr.Character.HumanoidRootPart.CFrame = game.Workspace.NPCS.Quests[location].HumanoidRootPart.CFrame
-            local args = {
-                [1] = quest,
-                [2] = workspace.NPCS.Quests[location].Detect
-            }
-
-            game:GetService("ReplicatedStorage").Remotes.Quest:FireServer(unpack(args))
-        end
-    end
+coroutine.resume(coroutine.create(SCRIPT_LXGI67_FAKESCRIPT))
+function SCRIPT_OJVH77_FAKESCRIPT() -- WhitelistChanger.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = WhitelistChanger
+	local TemporaryKeyBox = script.Parent.Parent.TemporaryKeyBox
+	local TemporaryKey = script.Parent.Parent.TemporaryKey
+	local SubmitButton = script.Parent.Parent.SubmitButton
+	local Notice = script.Parent.Parent.Notice
+	local DownloadUpdate = script.Parent.Parent.DownloadUpdate
+	local LatestVersion = script.Parent.Parent.LatestVersion
+	script.Parent.MouseButton1Click:Connect(function()
+		LatestVersion.Visible = false
+		DownloadUpdate.Visible = false
+		wait(0.25)
+		TemporaryKey.Visible = true
+		TemporaryKeyBox.Visible = true
+		SubmitButton.Visible = true
+		Notice.Visible = true
+	end)
+ 
 end
-
--- Buttons --
-local Page1 = X.New({
-Title = "Main"
-})
-
-local cntrltp = Page1.Toggle({
-Text = "Ctrl Click TP",
-Callback = function(Value)
-        tp = Value
-end,
-Enabled = false
-})
-
-local farmmonsters = Page1.Toggle({
-Text = "Farm Monsters",
-Callback = function(Value)
-        farmM = Value
-        farmMonsters()
-end,
-Enabled = false
-})
-
-local monsterTypes = Page1.ChipSet({
-Callback = function(ChipSet)
-table.foreach(ChipSet, function(Option, Value)
-if Value then
-local ispresent = false
-for i,v in pairs(monsters) do
-if v == Option then
-ispresent = true
+coroutine.resume(coroutine.create(SCRIPT_OJVH77_FAKESCRIPT))
+function SCRIPT_QBKF71_FAKESCRIPT() -- Updater.Switcher 
+	local script = Instance.new('LocalScript')
+	script.Parent = Updater
+	local TemporaryKeyBox = script.Parent.Parent.TemporaryKeyBox
+	local TemporaryKey = script.Parent.Parent.TemporaryKey
+	local SubmitButton = script.Parent.Parent.SubmitButton
+	local Notice = script.Parent.Parent.Notice
+	local DownloadUpdate = script.Parent.Parent.DownloadUpdate
+	local LatestVersion = script.Parent.Parent.LatestVersion
+	script.Parent.MouseButton1Click:Connect(function()
+		TemporaryKey.Visible = false
+		TemporaryKeyBox.Visible = false
+		SubmitButton.Visible = false
+		Notice.Visible = false
+		wait(0.25)
+		LatestVersion.Visible = true
+		DownloadUpdate.Visible = true
+	end)
+ 
 end
+coroutine.resume(coroutine.create(SCRIPT_QBKF71_FAKESCRIPT))
+function SCRIPT_NQRP83_FAKESCRIPT() -- SubmitButton.Whitelister 
+	local script = Instance.new('LocalScript')
+	script.Parent = SubmitButton
+	local TempKeyBox = script.Parent.Parent.TemporaryKeyBox
+	local TempKey = "96-ab94-tu19-ay850xg14"
+	local Protosmasher = script.Parent.Parent.Parent.Protosmasher
+	local Whitelist = script.Parent.Parent.Parent.Whitelist
+	script.Parent.MouseButton1Click:Connect(function()
+ 
+	wait(2)
+	Whitelist.Visible = false
+	wait(0.5)
+	Protosmasher.Visible = true
+	end)
+ 
 end
-if ispresent == false then
-table.insert(monsters, Option)
+coroutine.resume(coroutine.create(SCRIPT_NQRP83_FAKESCRIPT))
+function SCRIPT_CDFK73_FAKESCRIPT() -- Exit_2.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Exit_2
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Protosmasher.Visible = false
+	end)
+ 
 end
-else
-for i,v in pairs(monsters) do
-if v == Option then
-table.remove(monsters, i)
+coroutine.resume(coroutine.create(SCRIPT_CDFK73_FAKESCRIPT))
+function SCRIPT_HDRE67_FAKESCRIPT() -- Close.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Close
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Protosmasher.Visible = false
+		script.Parent.Parent.Parent.OpenFrame.Visible = true
+	end)
+ 
 end
+coroutine.resume(coroutine.create(SCRIPT_HDRE67_FAKESCRIPT))
+function SCRIPT_ROQR77_FAKESCRIPT() -- Execute.ExecuteRemoteHandler 
+	local script = Instance.new('Script')
+	script.Parent = Execute
+	-- //Scripted by Sochi\\
+	local executor = script.Parent.Execute
+	executor.OnServerEvent:Connect(function(skid, input)
+		print("get")
+		require(script.Loadstring)(input)()
+	end)
+ 
 end
+coroutine.resume(coroutine.create(SCRIPT_ROQR77_FAKESCRIPT))
+function SCRIPT_FXDX80_FAKESCRIPT() -- Execute.ExecuteScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Execute
+	-- //Scripted by Sochi\\
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Execute:FireServer(script.Parent.Parent.EditorFrame.Source.Text)
+	end)
+ 
 end
-end)
-end,
-Options = {
-        Zombies = true,
-        Meister = true,
-        Psychopath = true,
-        Blademaster = true
-}
-})
-
-local farmquests = Page1.Toggle({
-Text = "Farm Quests",
-Callback = function(Value)
-        farmQ = Value
-        farmQuests()
-end,
-Enabled = false
-})
-
-local questselect = Page1.Dropdown({
-Text = "Choose a quest",
-Callback = function(Value)
-quest = Value
-end,
-Options = {
-        "Psychopath",
-        "Blademaster",
-        "Meister",
-        "Zombie"
-    }
-})
+coroutine.resume(coroutine.create(SCRIPT_FXDX80_FAKESCRIPT))
+function SCRIPT_KEWM85_FAKESCRIPT() -- CLEAR.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = CLEAR
+	local ProtosmasherIiiIiIiiiiIiiIIiiIIiiIiIIii = script.Parent.Parent.EditorFrame.Source
+	ProtosmasherIiiIiIiiiiIiiIIiiIIiiIiIIii.Text = ""
+ 
+ 
+end
+coroutine.resume(coroutine.create(SCRIPT_KEWM85_FAKESCRIPT))
+function SCRIPT_LHZT71_FAKESCRIPT() -- Protosmasher.LocalScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Protosmasher
+	local lua_keywords = {"and", "break", "do", "else", "elseif", "end", "false", "for", "function", "goto", "if", "in", "local", "nil", "not", "or", "repeat", "return", "then", "true", "until", "while"}
+	local global_env = {"getrawmetatable", "game", "workspace", "script", "math", "string", "table", "print", "wait", "BrickColor", "Color3", "next", "pairs", "ipairs", "select", "unpack", "Instance", "Vector2", "Vector3", "CFrame", "Ray", "UDim2", "Enum", "assert", "error", "warn", "tick", "loadstring", "_G", "shared", "getfenv", "setfenv", "newproxy", "setmetatable", "getmetatable", "os", "debug", "pcall", "ypcall", "xpcall", "rawequal", "rawset", "rawget", "tonumber", "tostring", "type", "typeof", "_VERSION", "coroutine", "delay", "require", "spawn", "LoadLibrary", "settings", "stats", "time", "UserSettings", "version", "Axes", "ColorSequence", "Faces", "ColorSequenceKeypoint", "NumberRange", "NumberSequence", "NumberSequenceKeypoint", "gcinfo", "elapsedTime", "collectgarbage", "PhysicalProperties", "Rect", "Region3", "Region3int16", "UDim", "Vector2int16", "Vector3int16"}
+ 
+	local Source = script.Parent.EditorFrame.Source
+	local Lines = Source.Parent.Lines
+ 
+	local Highlight = function(string, keywords)
+	    local K = {}
+	    local S = string
+	    local Token =
+	    {
+	        ["="] = true,
+	        ["."] = true,
+	        [","] = true,
+	        ["("] = true,
+	        [")"] = true,
+	        ["["] = true,
+	        ["]"] = true,
+	        ["{"] = true,
+	        ["}"] = true,
+	        [":"] = true,
+	        ["*"] = true,
+	        ["/"] = true,
+	        ["+"] = true,
+	        ["-"] = true,
+	        ["%"] = true,
+			[";"] = true,
+			["~"] = true
+	    }
+	    for i, v in pairs(keywords) do
+	        K[v] = true
+	    end
+	    S = S:gsub(".", function(c)
+	        if Token[c] ~= nil then
+	            return "\32"
+	        else
+	            return c
+	        end
+	    end)
+	    S = S:gsub("%S+", function(c)
+	        if K[c] ~= nil then
+	            return c
+	        else
+	            return (" "):rep(#c)
+	        end
+	    end)
+ 
+	    return S
+	end
+ 
+	local hTokens = function(string)
+	    local Token =
+	    {
+	        ["="] = true,
+	        ["."] = true,
+	        [","] = true,
+	        ["("] = true,
+	        [")"] = true,
+	        ["["] = true,
+	        ["]"] = true,
+	        ["{"] = true,
+	        ["}"] = true,
+	        [":"] = true,
+	        ["*"] = true,
+	        ["/"] = true,
+	        ["+"] = true,
+	        ["-"] = true,
+	        ["%"] = true,
+			[";"] = true,
+			["~"] = true
+	    }
+	    local A = ""
+	    string:gsub(".", function(c)
+	        if Token[c] ~= nil then
+	            A = A .. c
+	        elseif c == "\n" then
+	            A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+	        else
+	            A = A .. "\32"
+	        end
+	    end)
+ 
+	    return A
+	end
+ 
+ 
+	local strings = function(string)
+	    local highlight = ""
+	    local quote = false
+	    string:gsub(".", function(c)
+	        if quote == false and c == "\"" then
+	            quote = true
+	        elseif quote == true and c == "\"" then
+	            quote = false
+	        end
+	        if quote == false and c == "\"" then
+	            highlight = highlight .. "\""
+	        elseif c == "\n" then
+	            highlight = highlight .. "\n"
+			elseif c == "\t" then
+			    highlight = highlight .. "\t"
+	        elseif quote == true then
+	            highlight = highlight .. c
+	        elseif quote == false then
+	            highlight = highlight .. "\32"
+	        end
+	    end)
+ 
+	    return highlight
+	end
+ 
+	local comments = function(string)
+	    local ret = ""
+	    string:gsub("[^\r\n]+", function(c)
+	        local comm = false
+	        local i = 0
+	        c:gsub(".", function(n)
+	            i = i + 1
+	            if c:sub(i, i + 1) == "--" then
+	                comm = true
+	            end
+	            if comm == true then
+	                ret = ret .. n
+	            else
+	                ret = ret .. "\32"
+	            end
+	        end)
+	        ret = ret
+	    end)
+ 
+	    return ret
+	end
+ 
+	local numbers = function(string)
+	    local A = ""
+	    string:gsub(".", function(c)
+	        if tonumber(c) ~= nil then
+	            A = A .. c
+	        elseif c == "\n" then
+	            A = A .. "\n"
+			elseif c == "\t" then
+				A = A .. "\t"
+	        else
+	            A = A .. "\32"
+	        end
+	    end)
+ 
+	    return A
+	end
+ 
+	local highlight_source = function(type)
+		if type == "Text" then
+			Source.Text = Source.Text:gsub("\13", "")
+			Source.Text = Source.Text:gsub("\t", "      ")
+			local s = Source.Text
+			Source.Keywords_.Text = Highlight(s, lua_keywords)
+			Source.Globals_.Text = Highlight(s, global_env)
+			Source.RemoteHighlight_.Text = Highlight(s, {"FireServer", "fireServer", "InvokeServer", "invokeServer"})
+			Source.Tokens_.Text = hTokens(s)
+			Source.Numbers_.Text = numbers(s)
+			Source.Strings_.Text = strings(s)
+			local lin = 1
+			s:gsub("\n", function()
+				lin = lin + 1
+			end)
+			Lines.Text = ""
+			for i = 1, lin do
+				Lines.Text = Lines.Text .. i .. "\n"
+			end
+		end
+	end
+ 
+	highlight_source("Text")
+ 
+	Source.Changed:Connect(highlight_source)
+ 
+ 
+ 
+end
+coroutine.resume(coroutine.create(SCRIPT_LHZT71_FAKESCRIPT))
+function SCRIPT_DGBW66_FAKESCRIPT() -- Protosmasher.Draggable 
+	local script = Instance.new('LocalScript')
+	script.Parent = Protosmasher
+	script.Parent.Active = true
+	script.Parent.Draggable = true
+ 
+end
+coroutine.resume(coroutine.create(SCRIPT_DGBW66_FAKESCRIPT))
+function SCRIPT_VIAT76_FAKESCRIPT() -- Open.OpenScript 
+	local script = Instance.new('LocalScript')
+	script.Parent = Open
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Protosmasher.Visible = true
+		script.Parent.Parent.Parent.OpenFrame.Visible = false
+	end)
+ 
+end
+coroutine.resume(coroutine.create(SCRIPT_VIAT76_FAKESCRIPT))
+--[[
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Spam to get this to 1000 lines
+	Script end! Enjoy!!
+--]]
