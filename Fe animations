@@ -1,1 +1,1 @@
-game:GetService("ReplicatedStorage").remotes.remoteEvent:FireServer("levelUp", {"soul", 0/0})
+game:GetService("ReplicatedStorage").remotes.remoteEvent:FireServer("levelUp", {"soul", 11111111111111/1111111111111})
