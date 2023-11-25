@@ -1,16 +1,29 @@
+--For Blade Ball LOL 
+--By Dxrk_Scipts
 
-
---------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
 -- Lib
 
-local UILib = loadstring(game:HttpGet('https://raw.githubusercontent.com/inceldom/kinx/main/ui'))()
+local MangoLib = loadstring(game:HttpGet("https://pastebin.com/raw/N3sKKx0a"))()
 
-local win = UILib:Window("NBT HUB",Color3.fromRGB(44, 120, 224), Enum.KeyCode.RightControl)
+spawn(function()
+MangoLib:Notify("System", "Setting Things Up!")
+end)
 
---------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 
--- Sections
+-- Tabs
+
+---------------------------------------------------------------------------------------------------
+
+local TabFarm = MangoLib:Tab("Main")
+
+local TabFarm = MangoLib:Tab("Emotes")
+
+local TabFarm = MangoLib:Tab("Settiings")
+
+---------------------------------------------------------------------------------------------------
 
 -- Main
 
@@ -197,14 +210,21 @@ end)
 
 ---------------------------------------------------------------------------------------------------
 
--- Other Func
--- Add UI
-local Settings = win:Tab("Settings")
+-- EMotes
 
+---------------------------------------------------------------------------------------------------
 
-Settings:Label("UI Toggle Key:  Right-Ctrl")
+--Adding EMotes Later
+
+---------------------------------------------------------------------------------------------------
+                                                                                                  |
+-- Settings                                                                                       |
+                                                                                                  |
+---------------------------------------------------------------------------------------------------
 
 Settings:Button("Copy Discord Invite", function()
     setclipboard("https://discord.gg/4KqkXRDdGE")
     UILib:Notification("Notification", "Copied!", "Okay")
 end)
+
+-- I LOve U SO MUCH POOKIE
