@@ -1,0 +1,79 @@
+--For Blade Ball LOL 
+--By Dxrk_Scipts
+
+-- types of tabs
+
+--Tab:Button("Print Hi", function()
+--Tab1:Button("Print Hi", function()
+--Tab2:Button("Print Hi", function()
+---------------------------------------------------------------------------------------------------
+
+-- Lib
+
+local MangoLib = loadstring(game:HttpGet("https://pastebin.com/raw/N3sKKx0a"))()
+
+spawn(function()
+MangoLib:Notify("System", "Setting Things Up!")
+end)
+
+---------------------------------------------------------------------------------------------------
+
+-- Tabs
+
+---------------------------------------------------------------------------------------------------
+
+local Tab = MangoLib:Tab("Main")
+
+local Tab1 = MangoLib:Tab("Emotes")
+
+local Tab2 = MangoLib:Tab("Settiings")
+
+---------------------------------------------------------------------------------------------------
+
+-- Main
+
+
+
+Tab2:Slider("Walk Speed", 16, 500, 40, function(t)
+	game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = t
+end)
+
+Tab2:Slider("JumpPower", 16, 500, 40, function(t)
+	game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = t
+end)
+
+
+Tab2:Slider("Gravity",0,500,196, function(t)
+    workspace.Gravity = t
+end)
+
+---------------------------------------------------------------------------------------------------
+
+-- EMotes
+
+---------------------------------------------------------------------------------------------------
+
+Tab2:Button("Print Hi", function()
+Print("Comming SOON")
+end)
+
+Tab2:Button("Print Hi", function()
+Print("Comming SOON")
+end)
+
+Tab2:Button("Print Hi", function()
+Print("Comming SOON")
+end)
+
+---------------------------------------------------------------------------------------------------
+                                                                                                  |
+-- Settings                                                                                       |
+                                                                                                  |
+---------------------------------------------------------------------------------------------------
+
+TabFarm:Button("Discord Invite", function()
+    setclipboard("https://discord.gg/Invalid")
+    UILib:Notification("Notification", "Copied!", "Okay")
+end)
+
+-- I LOve U SO MUCH POOKIE
